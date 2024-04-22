@@ -34,24 +34,7 @@ class HomeView extends GetView<HomeController> {
                     ? const Center(
                         child: CircularProgressIndicator(),
                       )
-                    : controller.isConnection.value == false
-                        ? Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.wifi_off,
-                                  color: Colors.grey,
-                                  size: Get.width * 0.3,
-                                ),
-                                const Text(
-                                  "Your are offline",
-                                  style: TextStyle(fontSize: 18),
-                                )
-                              ],
-                            ),
-                          )
-                        : ListView.builder(
+                    :  ListView.builder(
                             itemCount: controller.userList.length,
                             itemBuilder: (context, index) {
                               UserData userData = controller.userList[index];

@@ -8,18 +8,13 @@ import 'package:nextdaysolution_task/services/api_helper.dart';
 
 class HomeController extends GetxController {
   RxList<UserData> userList = <UserData>[].obs;
-  RxBool isConnection = false.obs;
   RxBool isLoading = false.obs;
 
   @override
   Future<void> onInit() async {
     isLoading.value = true;
-    isConnection.value = await checkConnectivity();
-    if (await checkConnectivity()) {
-      getUserData();
-    } else {
-      isLoading.value = false;
-    }
+    getUserData();
+
     super.onInit();
   }
 

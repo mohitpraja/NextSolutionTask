@@ -1,6 +1,8 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nextdaysolution_task/core/all_pages.dart';
+import 'package:nextdaysolution_task/core/helper.dart';
 import 'package:nextdaysolution_task/core/routes.dart';
 import 'package:nextdaysolution_task/services/local_db.dart';
 
