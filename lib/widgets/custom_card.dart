@@ -27,6 +27,9 @@ class CustomCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
                 child: CachedNetworkImage(
                   imageUrl: userData.avatar,
+                  placeholder: (context, url) {
+                    return const CupertinoActivityIndicator();
+                  },
                   height: 60,
                   width: 60,
                 ),
